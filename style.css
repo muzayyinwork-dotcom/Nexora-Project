@@ -47,22 +47,24 @@ body {
 
 .login-card {
   background: var(--secondary-bg);
-  width: 80%;
-  max-width: 450px;
-  height: 80vh;
+  width: min(85%, 420px);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  margin: auto;
-  padding: 20px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 40px;
 }
 
 .sign-in-message {
   color: var(--primary-text);
+  font-size: 28px;
+  line-height: 1.2;
   margin-bottom: 10px;
 }
 .sign-in-welcome {
   color: var(--secondary-text);
-  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
 .login-form {
   display: flex;
@@ -71,18 +73,22 @@ body {
 
 label {
   color: var(--primary-text);
-  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
 .email-input,
 .pass-input {
-  padding: 8px;
+  padding: 13px 14px;
   background: var(--card-bg);
-  border: none;
   border: 1px solid var(--border);
-  border-radius: 5px;
-  margin-bottom: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
   outline: none;
+  color: var(--primary-text);
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .email-input:focus:valid,
@@ -98,22 +104,26 @@ label {
 .out-label {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .forgot {
   text-decoration: none;
   color: var(--primary);
+  font-size: 13px;
 }
 
 .sign-in-btn {
   background: var(--primary);
   border: none;
-  padding: 10px;
-  border-radius: 12px;
-  transition: background 0.5s;
+  padding: 13px;
+  border-radius: 8px;
+  transition: background 0.3s;
   color: var(--primary-text);
-  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 28px;
 }
 
 .sign-in-btn:hover {
@@ -125,13 +135,13 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .or-text {
-  font-size: 0.7rem;
+  font-size: 12px;
   color: var(--primary-text);
-  margin: 0 15px;
-  font-weight: 100;
+  margin: 0 14px;
+  font-weight: 500;
 }
 .design {
   width: 100%;
@@ -140,17 +150,18 @@ label {
 }
 
 .google {
-  padding: 10px;
-  background: var(--bg-card);
-  border-radius: 5px;
-  border: 2px solid var(--border);
+  padding: 13px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
   color: var(--primary-text);
-  font-weight: bold;
-  margin-bottom: 40px;
-  transition: filter 0.5s;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 32px;
+  transition: opacity 0.3s;
 }
 .google:hover {
-  filter: opacity(50%);
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -162,6 +173,14 @@ label {
 .account-link {
   text-decoration: none;
   color: var(--primary);
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 13px;
 }
 
 @media (min-width: 668px) {
@@ -202,39 +221,55 @@ label {
   }
   .img-title {
     color: var(--primary-text);
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
   .img-desc {
     color: var(--secondary-text);
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.5;
   }
   .card {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 14px;
+    margin-bottom: 24px;
+    align-items: flex-start;
   }
   .list-img {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: var(--card-bg);
-    padding: 5px;
-    border-radius: 50%;
+    padding: 7px;
+    border-radius: 10px;
+    flex-shrink: 0;
   }
   .login {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px;
   }
   .brand {
     background: var(--secondary-bg);
+    padding: 20px 40px;
   }
 }
 
 @media (min-width: 1024px) {
   .welcome {
-    font-size: 50px;
+    font-size: 42px;
+    line-height: 1.15;
+    color: var(--primary-text);
+    padding: 20px;
+    font-weight: 700;
   }
   .desc {
-    font-size: 20px;
+    font-size: 17px;
+    color: var(--secondary-text);
+    padding: 20px;
+    margin-top: -20px;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 600px;
   }
 }
