@@ -3,94 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Nexora - Sign In</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <main>
-      <section class="brand">
-        <div class="brand-container">
-          <h1 class="logo">Nexora</h1>
+    <main class="login-page">
+      <section class="login-brand">
+        <div class="login-brand__header">
+          <h1 class="brand-logo">Nexora</h1>
         </div>
-        <p class="welcome">Welcome back to <span> Nexora</span></p>
-        <p class="desc">
+
+        <p class="brand-content__title">Welcome back to <span>Nexora</span></p>
+
+        <p class="brand-content__description">
           Manage your work, collaborate with your team, and stay productive from
-          one powerful workspcase.
+          one powerful workspace.
         </p>
-        <div class="container">
-          <div class="card">
-            <img src="./img/thunder.png" alt="Thunder Image" class="list-img" />
-            <div class="img-desc">
-              <h2 class="img-title">Work Smarter</h2>
-              <p class="img-title-desc">
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <img
+              src="./img/thunder.png"
+              alt="Thunder"
+              class="feature-item__icon"
+            />
+
+            <div class="feature-item__content">
+              <h2 class="feature-item__title">Work Smarter</h2>
+              <p class="feature-item__description">
                 Streamline your tasks and get more done.
               </p>
             </div>
           </div>
-          <div class="card">
-            <img src="./img/people.png" alt="People pic" class="list-img" />
-            <div class="img-desc">
-              <h2 class="img-title">Better Together</h2>
-              <p class="img-title-desc">
+
+          <div class="feature-item">
+            <img
+              src="./img/people.png"
+              alt="People"
+              class="feature-item__icon"
+            />
+
+            <div class="feature-item__content">
+              <h2 class="feature-item__title">Better Together</h2>
+              <p class="feature-item__description">
                 Collaborate with your team in real time.
               </p>
             </div>
           </div>
-          <div class="card">
-            <img src="./img/security.png" alt="Security" class="list-img" />
-            <div class="img-desc">
-              <h2 class="img-title">Built for Security</h2>
-              <p class="img-title-desc">Your data is always safe with us.</p>
+
+          <div class="feature-item">
+            <img
+              src="./img/security.png"
+              alt="Security"
+              class="feature-item__icon"
+            />
+
+            <div class="feature-item__content">
+              <h2 class="feature-item__title">Built for Security</h2>
+              <p class="feature-item__description">
+                Your data is always safe with us.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="login">
+
+      <section class="login-panel">
         <div class="login-card">
-          <h2 class="sign-in-message">Sign in to your account</h2>
-          <p class="sign-in-welcome">
+          <h2 class="login-card__title">Sign in to your account</h2>
+
+          <p class="login-card__description">
             Welcome back! Please enter your details to continue.
           </p>
+
           <form class="login-form">
-            <label for="email" class="email">Email address</label>
+            <label for="email">Email address</label>
+
             <input
               type="email"
               id="email"
-              class="email-input"
+              class="login-form__input"
               placeholder="✉ you@gmail.com"
               required
             />
 
-            <label for="pass">Password</label>
+            <label for="password">Password</label>
+
             <input
               type="password"
-              id="pass"
-              class="pass-input"
+              id="password"
+              class="login-form__input"
               placeholder="🔒︎ Enter your password"
+              required
             />
 
-            <div class="out-label">
-              <label for="remember" class="remember">
-                <input type="checkbox" id="remember" class="checkbox" />
+            <div class="form-options">
+              <label for="remember" class="remember-option">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  class="remember-option__checkbox"
+                />
                 Remember me
               </label>
 
-              <a href="" class="forgot">Forgot password?</a>
+              <a href="#" class="form-options__link"> Forgot password? </a>
             </div>
 
-            <button class="sign-in-btn">Sign In</button>
+            <button type="submit" class="login-form__submit">Sign In</button>
 
-            <div class="or">
-              <div class="design"></div>
-              <h3 class="or-text">OR</h3>
-              <div class="design"></div>
+            <div class="social-divider">
+              <div class="social-divider__line"></div>
+              <span class="social-divider__text">OR</span>
+              <div class="social-divider__line"></div>
             </div>
 
-            <button class="google">Continue with Google</button>
+            <button type="button" class="google-login-button">
+              Continue with Google
+            </button>
 
-            <p class="no-account">
+            <p class="signup-prompt">
               Don't have an account?
-              <a href="" class="account-link">Create one</a>
+              <a href="#" class="signup-prompt__link">Create one</a>
             </p>
           </form>
         </div>
